@@ -1,21 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import { MyButton } from "../components/Button";
 import { Button } from "ui/react";
 import { Counter } from "ui/vue";
 import { Counter as SolidCounter } from "ui/solid";
+import { CardList } from "../components/CardList";
+
+const response = await fetch("https://dummyjson.com/posts");
+const posts = await response.json();
 ---
 
 <Layout title="index">
   <div>
     <h1 class="text-3xl">React</h1>
-    <MyButton client:only="react" />
     <Button text="React" />
     <h1 class="text-3xl">Vue</h1>
     <Counter client:only="vue" />
 
     <h1 class="text-3xl">Solid</h1>
     <SolidCounter client:only="solid" />
+
+    <CardList client:only="react" data={posts?.posts} />
   </div>
 </Layout>

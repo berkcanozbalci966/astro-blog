@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,astro,jsx,vue}"],
+  content: ["./src/**/*.{html,js,astro,tsx,vue}"],
   theme: {
     fontSize: {
       "2xl": "1.5rem",
@@ -8,6 +8,9 @@ module.exports = {
       "8xl": "10rem",
     },
     extend: {},
+    daisyui: {
+      themes: ["cupcake", "dark", "cmyk"],
+    },
   },
   plugins: [require("daisyui")],
 };
