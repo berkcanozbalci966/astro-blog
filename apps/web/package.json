@@ -13,14 +13,20 @@
   "dependencies": {
     "@astrojs/node": "^3.1.0",
     "@astrojs/react": "^1.2.2",
+    "@astrojs/solid-js": "^1.2.3",
+    "@astrojs/svelte": "^1.0.2",
+    "@astrojs/vue": "^1.2.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^1.6.10",
     "daisyui": "^2.43.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "solid-js": "^1.4.3",
+    "svelte": "^3.46.4",
     "tsconfig": "workspace:*",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "vue": "^3.2.30"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

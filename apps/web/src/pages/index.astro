@@ -2,14 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { MyButton } from "../components/Button";
-import { Button } from "ui";
+import { Button } from "ui/react";
+import { Counter } from "ui/vue";
+import { Counter as SolidCounter } from "ui/solid";
 ---
 
 <Layout title="index">
   <div>
-    <h1 class="text-lg">Test</h1>
-    <MyButton client:only />
-    <Button />
-    <button class="btn btn-primary">Button</button>
+    <h1 class="text-3xl">React</h1>
+    <MyButton client:only="react" />
+    <Button text="React" />
+    <h1 class="text-3xl">Vue</h1>
+    <Counter client:only="vue" />
+
+    <h1 class="text-3xl">Solid</h1>
+    <SolidCounter client:only="solid" />
   </div>
 </Layout>
