@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Button } from "ui/react";
 import { Counter } from "ui/vue";
 import { Counter as SolidCounter } from "ui/solid";
-import { CardList } from "../components/CardList";
+import { PostCard } from "../components/PostCard";
 
 const response = await fetch("https://dummyjson.com/posts");
 const posts = await response.json();
@@ -19,6 +19,12 @@ const posts = await response.json();
     <h1 class="text-3xl">Solid</h1>
     <SolidCounter client:only="solid" />
 
-    <CardList client:only="react" data={posts?.posts} />
+    <div class="flex flex-row flex-wrap">
+      {
+        posts.posts?.map((post: any) => {
+          return <PostCard title={post.title} tags={post.tags} />;
+        })
+      }
+    </div>
   </div>
 </Layout>
