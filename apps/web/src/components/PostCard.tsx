@@ -1,12 +1,13 @@
 type Props = {
-  title: string,
-  tags:string[] 
+  title: string;
+  tags: string[];
+  id: number;
 };
 
-export const PostCard = ({ title, tags }: Props) => {
+export const PostCard = ({ title, tags, id }: Props) => {
   return (
-    <>
-      <div className="card w-96 bg-base-100 shadow-xl mb-5">
+    <a href={`/postdetail/${id}`}>
+      <div className="card w-96  h-40 bg-base-100 shadow-xl mb-5">
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
 
@@ -17,6 +18,6 @@ export const PostCard = ({ title, tags }: Props) => {
           </div>
         </div>
       </div>
-    </>
+    </a>
   );
 };

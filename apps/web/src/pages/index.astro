@@ -11,18 +11,18 @@ const posts = await response.json();
 
 <Layout title="index">
   <div>
-    <h1 class="text-3xl">React</h1>
+    <!-- <h1 class="text-3xl">React</h1>
     <Button text="React" />
     <h1 class="text-3xl">Vue</h1>
     <Counter client:only="vue" />
 
     <h1 class="text-3xl">Solid</h1>
-    <SolidCounter client:only="solid" />
+    <SolidCounter client:only="solid" /> -->
 
     <div class="flex flex-row flex-wrap">
       {
         posts.posts?.map((post: any) => {
-          return <PostCard title={post.title} tags={post.tags} />;
+          return <PostCard title={post.title} tags={post.tags} id={post.id} />;
         })
       }
     </div>
