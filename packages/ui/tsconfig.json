@@ -17,8 +17,11 @@
     // Properly support importing CJS modules in ESM
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "strict": true,
+    "noImplicitThis": true
   },
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "build", "node_modules"],
+  "extends": ""
 }

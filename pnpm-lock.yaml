@@ -77,6 +77,7 @@ importers:
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       babel-preset-solid: ^1.6.3
+      clsx: ^1.2.1
       react: ^18.2.0
       solid-js: ^1.4.3
       tsconfig: workspace:*
@@ -84,6 +85,7 @@ importers:
       vue: ^3.2.30
     dependencies:
       babel-preset-solid: 1.6.3
+      clsx: 1.2.1
       solid-js: 1.6.5
       vue: 3.2.45
     devDependencies:
@@ -1614,6 +1616,11 @@ packages:
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:
