@@ -1,6 +1,6 @@
 ---
+import AuthorInfo from "../../components/AuthorInfo.vue";
 import Layout from "../../layouts/Layout.astro";
-import { Like } from "ui/vue";
 const { postid } = Astro.params;
 
 const response = await fetch(`https://dummyjson.com/posts/${postid}`);
@@ -28,12 +28,7 @@ const userDetail = await userResponse.json();
             </button>
           ))
         }
-        <div class="mt-5">
-          <p>{`${userDetail?.firstName} ${userDetail?.lastName}`}</p>
-          <p>{`${userDetail?.email}`}</p>
-          <p>{`${userDetail?.domain}`}</p>
-        </div>
-        <Like />
+        <AuthorInfo userDetail={userDetail} client:only />
       </div>
     </div>
   </div>
