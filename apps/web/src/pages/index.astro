@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Button } from "ui/react";
 import { Counter } from "ui/vue";
 import { Counter as SolidCounter } from "ui/solid";
-import { PostCard } from "../components/PostCard";
+import { PostCard } from "../components/react/PostCard";
 
 const response = await fetch("https://dummyjson.com/posts");
 const posts = await response.json();
